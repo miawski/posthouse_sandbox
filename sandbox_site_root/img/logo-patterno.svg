@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Patterno logo</title>
+  <defs>
+    <linearGradient id="patterno-blue" x1="20%" y1="10%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#72bcff"/>
+      <stop offset="100%" stop-color="#1e78c0"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="40" fill="#09182a"/>
+  <rect x="24" y="24" width="192" height="192" rx="28" fill="none" opacity="0.18" stroke="#eef5fc"/>
+  <path
+    d="M86 52v136"
+    fill="none"
+    stroke="url(#patterno-blue)"
+    stroke-linecap="round"
+    stroke-width="18"
+  />
+  <path
+    d="M86 60h42c29 0 48 18 48 42s-19 42-48 42H86"
+    fill="none"
+    stroke="url(#patterno-blue)"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="18"
+  />
+  <circle cx="166" cy="66" r="10" fill="#eef5fc"/>
+</svg>

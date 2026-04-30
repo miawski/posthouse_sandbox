@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Nørrebro Posthus logo</title>
+  <defs>
+    <linearGradient id="logo-blue" x1="20%" y1="10%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#8fd1ff"/>
+      <stop offset="100%" stop-color="#2e78b7"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="40" fill="#0c1827"/>
+  <rect x="24" y="24" width="192" height="192" rx="28" fill="none" opacity="0.18" stroke="#eff5fb"/>
+  <path d="M68 104c0-24 20-44 44-44h16c24 0 44 20 44 44v56c0 24-20 44-44 44h-16c-24 0-44-20-44-44Z" fill="none" stroke="url(#logo-blue)" stroke-width="18"/>
+  <path d="M98 88h44" fill="none" stroke="#eff5fb" stroke-linecap="round" stroke-width="10"/>
+  <path d="M98 124h44" fill="none" stroke="#eff5fb" stroke-linecap="round" stroke-width="10" opacity="0.8"/>
+  <path d="M84 72 120 48l36 24" fill="none" stroke="#ef7354" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+</svg>

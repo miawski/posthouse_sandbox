@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="da" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#0c1827">
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Nørrebro Posthus | Lokal pakkeshop på Nørrebro</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Hovedmenu">
+        <a class="brand" href="#top" aria-label="Gå til toppen">
+          <img src="img/logo-norrebro-posthus.svg" alt="Nørrebro Posthus logo">
+          <span class="brand__text">
+            <strong>NØRREBRO</strong>
+            <span>Posthus</span>
+          </span>
+        </a>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#about">Om os</a>
+          <a href="#providers">Leverandører</a>
+          <a href="#hours">Åbningstider</a>
+          <a href="#guide">Sådan virker det</a>
+          <a href="#help">Kontakt</a>
+        </div>
+
+        <div class="nav-controls">
+          <button
+            id="theme-toggle"
+            class="theme-switch"
+            type="button"
+            role="switch"
+            aria-checked="true"
+            aria-label="Skift til lys tilstand"
+          >
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-icon theme-switch-icon--moon">☾</span>
+              <span class="theme-switch-icon theme-switch-icon--sun">☀</span>
+              <span class="theme-switch-thumb"></span>
+            </span>
+            <span class="theme-switch-text visually-hidden">Lys</span>
+          </button>
+
+          <button
+            class="burger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Åbn menu"
+          >
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__copy reveal is-visible">
+            <p class="eyebrow">Velkommen til</p>
+            <h1>Nørrebro Posthus</h1>
+            <p class="hero__lead">
+              Hos Nørrebro Posthus kan du hente pakker fra flere leverandører og
+              hurtigt finde de vigtigste oplysninger om adresse, åbningstider og
+              kontakt, når du har brug for dem.
+            </p>
+
+            <ul class="hero__details" aria-label="Nøgleinformation">
+              <li>Nørrebrogade 166</li>
+              <li>2200 København N</li>
+              <li>PostNord, DHL, DAO, Bring og UPS</li>
+              <li>Over 150 pakker afleveres hver dag</li>
+            </ul>
+
+            <div class="hero__actions">
+              <a class="button" href="#hours">Se åbningstider</a>
+              <a class="button button--ghost" href="#location-map">Find os</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-hidden="true">
+            <div class="hero-visual__map">
+              <svg
+                class="hero-visual__path"
+                viewBox="0 0 1000 700"
+                preserveAspectRatio="none"
+              >
+                <path
+                  class="hero-visual__path-track"
+                  d="M 152 432 C 220 430 266 404 308 360 C 340 326 374 304 420 312 C 468 320 498 374 536 398 C 572 420 612 416 650 384 C 696 344 732 320 772 336 C 798 346 816 376 820 406"
+                ></path>
+                <path
+                  class="hero-visual__path-progress"
+                  d="M 152 432 C 220 430 266 404 308 360 C 340 326 374 304 420 312 C 468 320 498 374 536 398 C 572 420 612 416 650 384 C 696 344 732 320 772 336 C 798 346 816 376 820 406"
+                ></path>
+              </svg>
+            </div>
+            <div class="hero-visual__street hero-visual__street--one"></div>
+            <div class="hero-visual__street hero-visual__street--two"></div>
+            <div class="hero-visual__street hero-visual__street--three"></div>
+            <div class="hero-visual__package">
+              <span></span>
+            </div>
+            <div class="hero-visual__label hero-visual__label--status">På vej</div>
+            <div class="hero-visual__label hero-visual__label--destination">
+              Nørrebro Posthus
+            </div>
+            <div class="hero-visual__marker"></div>
+            <div class="hero-visual__building hero-visual__building--one"></div>
+            <div class="hero-visual__building hero-visual__building--two"></div>
+            <div class="hero-visual__building hero-visual__building--three"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="content-block reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Din lokale pakkeshop</p>
+          <h2>Få leveret dine pakker hos os</h2>
+          <p class="subheading">
+            Nørrebro Posthus er en lokal pakkeshop med fokus på hurtig afhentning,
+            tydelig information og nem adgang til de oplysninger, kunderne oftest
+            leder efter i hverdagen.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="about-card about-card--media">
+            <img
+              src="img/posthus-facade.jpg"
+              alt="Foto af facaden ved Nørrebro Posthus med skilte for flere pakkefirmaer"
+              loading="lazy"
+            >
+          </article>
+
+          <article class="about-card about-card--copy">
+            <p>
+              Butikken ligger centralt på Nørrebrogade og fungerer som fast
+              afhentningssted for mange lokale kunder, der har brug for et hurtigt
+              overblik over deres pakker og leverandører.
+            </p>
+            <p>
+              Her skal det være enkelt at se, hvor du finder pakkeshoppen, hvornår
+              der er åbent, og hvem du skal kontakte, hvis dit spørgsmål handler
+              om selve leveringen.
+            </p>
+
+            <div class="stat-card" aria-label="Pakker afleveres hver dag">
+              <span class="stat-card__value">Over 150</span>
+              <span class="stat-card__label">pakker afleveres hver dag</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="providers" class="content-block reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Leverandører</p>
+          <h2>Vi håndterer pakker fra flere leverandører</h2>
+          <p class="subheading">
+            Hos Nørrebro Posthus kan du hente pakker fra flere af de mest brugte
+            leverandører. Herunder kan du hurtigt finde både leverandør og
+            kundeservice, hvis du har spørgsmål til din forsendelse.
+          </p>
+        </div>
+
+        <div class="provider-grid">
+          <article class="provider-card">
+            <img
+              class="provider-card__logo"
+              src="img/provider-postnord.png"
+              alt="PostNord logo"
+              loading="lazy"
+            >
+            <p class="provider-card__badge">PostNord</p>
+            <h3>PostNord</h3>
+            <p class="provider-card__phone">Kundeservice: 70 70 70 30</p>
+            <p>Har du en PostNord-pakke på vej, kan du hente den her og kontakte PostNord direkte ved spørgsmål om levering.</p>
+            <div class="provider-card__actions">
+              <a class="button button--small" href="tel:70707030">Ring</a>
+            </div>
+          </article>
+
+          <article class="provider-card">
+            <img
+              class="provider-card__logo"
+              src="img/provider-dhl.png"
+              alt="DHL logo"
+              loading="lazy"
+            >
+            <p class="provider-card__badge">DHL</p>
+            <h3>DHL</h3>
+            <p class="provider-card__phone">Kundeservice: 70 34 53 45</p>
+            <p>DHL-forsendelser kan afhentes lokalt, og kundeservice kan kontaktes direkte ved ændringer eller forsinkelser.</p>
+            <div class="provider-card__actions">
+              <a class="button button--small" href="tel:70345345">Ring</a>
+            </div>
+          </article>
+
+          <article class="provider-card">
+            <img
+              class="provider-card__logo"
+              src="img/provider-dao.png"
+              alt="DAO logo"
+              loading="lazy"
+            >
+            <p class="provider-card__badge">DAO</p>
+            <h3>DAO</h3>
+            <p class="provider-card__phone">Kundeservice: 72 33 08 50</p>
+            <p>DAO-pakker er en del af den daglige afhentning, så du hurtigt kan se, om din levering skal hentes her.</p>
+            <div class="provider-card__actions">
+              <a class="button button--small" href="tel:72330850">Ring</a>
+            </div>
+          </article>
+
+          <article class="provider-card">
+            <img
+              class="provider-card__logo"
+              src="img/provider-bring.png"
+              alt="Bring logo"
+              loading="lazy"
+            >
+            <p class="provider-card__badge">Bring</p>
+            <h3>Bring</h3>
+            <p class="provider-card__phone">Kundeservice: 70 28 60 70</p>
+            <p>Bring-forsendelser vises sammen med de øvrige leverandører, så al vigtig information er samlet ét sted.</p>
+            <div class="provider-card__actions">
+              <a class="button button--small" href="tel:70286070">Ring</a>
+            </div>
+          </article>
+
+          <article class="provider-card">
+            <img
+              class="provider-card__logo"
+              src="img/provider-ups.png"
+              alt="UPS logo"
+              loading="lazy"
+            >
+            <p class="provider-card__badge">UPS</p>
+            <h3>UPS</h3>
+            <p class="provider-card__phone">Kundeservice: 35 25 80 80</p>
+            <p>UPS-pakker kan også afhentes hos Nørrebro Posthus, og kontaktoplysningerne er lige ved hånden, hvis du får brug for hjælp.</p>
+            <div class="provider-card__actions">
+              <a class="button button--small" href="tel:35258080">Ring</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="hours" class="feature reveal">
+        <div class="feature__media">
+          <iframe
+            id="location-map"
+            class="feature__map"
+            src="https://maps.google.com/maps?q=N%C3%B8rrebro%20Posthus&t=m&z=14&output=embed&iwloc=near"
+            title="Kort over Nørrebro Posthus"
+            aria-label="Kort over Nørrebro Posthus"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="feature__overlay">
+            <p>Nørrebrogade 166, 2200 København N</p>
+          </div>
+        </div>
+
+        <div class="feature__copy">
+          <p class="eyebrow">Praktisk information</p>
+          <h2>Adresse og åbningstider samlet ét sted</h2>
+          <p class="subheading">
+            Her finder du hurtigt de praktiske oplysninger, som de fleste kunder
+            leder efter først: hvor pakkeshoppen ligger, hvornår der er åbent,
+            og hvordan du nemmest finder vej.
+          </p>
+
+          <div class="info-stack">
+            <div class="info-card">
+              <h3>Adresse</h3>
+              <p>Nørrebrogade 166<br>2200 København N</p>
+              <a
+                class="button button--small button--ghost"
+                href="https://maps.google.com/?q=N%C3%B8rrebrogade%20166%2C%202200%20K%C3%B8benhavn%20N"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Åbn i kort
+              </a>
+            </div>
+
+            <div class="info-card">
+              <h3>Åbningstider</h3>
+              <ul class="hours-list">
+                <li><span>Mandag–fredag</span><strong>10:00–18:30</strong></li>
+                <li><span>Lørdag</span><strong>10:30–16:30</strong></li>
+                <li><span>Søndag og helligdage</span><strong>Lukket</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="info-note">
+            Spørgsmål om levering, forsinkelse eller track and trace skal rettes
+            til den leverandør, der står for din pakke.
+          </p>
+        </div>
+      </section>
+
+      <section id="guide" class="gallery reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Sådan virker det</p>
+          <h2>Sådan henter du din pakke</h2>
+          <p class="subheading">
+            Det skal være hurtigt og enkelt at hente sin pakke. Derfor er processen
+            samlet i fire korte trin, som giver et klart overblik fra besked til
+            afhentning.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img src="img/gallery-01.svg" alt="Illustration af besked om pakke på vej">
+            <figcaption>
+              <strong>1.</strong> Modtag besked fra pakkefirmaet
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="img/gallery-02.svg" alt="Illustration af leverandøroversigt og afhentningssted">
+            <figcaption>
+              <strong>2.</strong> Tjek leverandør og afhentningssted
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="img/gallery-03.svg" alt="Illustration af legitimation og afhentningskode">
+            <figcaption>
+              <strong>3.</strong> Medbring legitimation og afhentningskode
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="img/gallery-04.svg" alt="Illustration af pakke, der bliver afhentet lokalt">
+            <figcaption>
+              <strong>4.</strong> Hent pakken hos Nørrebro Posthus
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="help" class="content-block reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Hjælp</p>
+          <h2>Har du spørgsmål til din pakke?</h2>
+          <p class="subheading">
+            Hvis du er i tvivl om levering, afhentningssted eller forsinkelse,
+            er det vigtigt hurtigt at finde den rigtige leverandør og de rette
+            kontaktoplysninger.
+          </p>
+        </div>
+
+        <div class="help-grid">
+          <article class="help-card">
+            <h3>Kontakt den rigtige leverandør</h3>
+            <p>
+              Nørrebro Posthus udleverer pakker, men spørgsmål om track and trace,
+              leveringstid og ændringer i forsendelsen skal som udgangspunkt gå
+              direkte til PostNord, DHL, DAO, Bring eller UPS.
+            </p>
+            <div class="tag-list" aria-label="Designassociationer">
+              <span>Lokal tryghed</span>
+              <span>Overblik</span>
+              <span>Pakker på vej</span>
+            </div>
+          </article>
+
+          <article class="help-card">
+            <h3>Kontakt og hjælp</h3>
+            <ul class="contact-list">
+              <li><span>PostNord</span><a href="tel:70707030">70 70 70 30</a></li>
+              <li><span>DHL</span><a href="tel:70345345">70 34 53 45</a></li>
+              <li><span>DAO</span><a href="tel:72330850">72 33 08 50</a></li>
+              <li><span>Bring</span><a href="tel:70286070">70 28 60 70</a></li>
+              <li><span>UPS</span><a href="tel:35258080">35 25 80 80</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <button class="scroll-fab" type="button" aria-label="Til indhold">
+      Til indhold
+    </button>
+
+    <footer id="footer" class="site-footer">
+      <div class="site-footer__inner">
+        <div>
+          <p class="eyebrow">Nørrebro Posthus</p>
+          <p>
+            Nørrebrogade 166<br>
+            2200 København N<br>
+            Din lokale pakkeshop på Nørrebro
+          </p>
+        </div>
+
+        <div>
+          <p class="eyebrow">Åbningstider</p>
+          <ul>
+            <li>Mandag–fredag: 10:00–18:30</li>
+            <li>Lørdag: 10:30–16:30</li>
+            <li>Søndag og helligdage: Lukket</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

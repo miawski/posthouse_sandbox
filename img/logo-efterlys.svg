@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Nordkyst Rådgivning logo</title>
+  <defs>
+    <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#8ed0ff"/>
+      <stop offset="100%" stop-color="#1d78c5"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="36" fill="#0d1b2c"/>
+  <circle cx="120" cy="120" r="72" fill="none" stroke="url(#g)" stroke-width="10"/>
+  <path d="M120 40v160M40 120h160" stroke="url(#g)" stroke-linecap="round" stroke-width="8"/>
+  <circle cx="120" cy="120" r="18" fill="#f1f7fd"/>
+</svg>

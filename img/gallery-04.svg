@@ -1,14 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img">
-  <rect width="960" height="720" fill="#11253a"/>
-  <rect y="468" width="960" height="252" fill="#0a1624"/>
-  <rect x="162" y="190" width="244" height="322" rx="28" fill="#173754"/>
-  <rect x="474" y="164" width="300" height="348" rx="28" fill="#20486f"/>
-  <rect x="214" y="248" width="142" height="138" rx="18" fill="#79bdf2"/>
-  <rect x="534" y="236" width="180" height="40" rx="20" fill="#dcefff" opacity="0.86"/>
-  <rect x="534" y="304" width="148" height="26" rx="13" fill="#dcefff" opacity="0.44"/>
-  <rect x="534" y="372" width="126" height="94" rx="18" fill="#f07a57"/>
-  <rect x="396" y="404" width="124" height="82" rx="22" fill="#f1dccd"/>
-  <rect x="420" y="430" width="76" height="12" rx="6" fill="#8c6f58"/>
-  <rect x="432" y="452" width="52" height="10" rx="5" fill="#8c6f58"/>
-  <path d="M110 624h740" stroke="#1c3551" stroke-width="14" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Hent pakken hos Nørrebro Posthus</title>
+  <desc id="desc">Illustration af lokal pakkeshop med butik, pakke og afhentning i Nørrebro Posthus-farver.</desc>
+  <rect width="960" height="720" fill="#fbf3e8"/>
+  <rect y="544" width="960" height="176" fill="#f1dfca"/>
+
+  <rect x="470" y="154" width="346" height="372" rx="32" fill="#110b07"/>
+  <rect x="470" y="154" width="346" height="84" rx="32" fill="#974f16"/>
+  <path d="M502 238h282l-20 46h-242z" fill="#c97525"/>
+  <path d="M546 238v46M614 238v46M682 238v46M750 238v46" stroke="#f6d4b1" stroke-width="8" stroke-linecap="round"/>
+  <rect x="532" y="320" width="94" height="206" rx="22" fill="#24160d"/>
+  <rect x="662" y="300" width="104" height="226" rx="22" fill="#24160d"/>
+  <rect x="560" y="352" width="38" height="96" rx="12" fill="#fbf1e7" opacity="0.2"/>
+  <rect x="694" y="336" width="42" height="112" rx="14" fill="#fbf1e7" opacity="0.16"/>
+  <text x="542" y="210" fill="#fbf1e7" font-family="Rubik, Arial, sans-serif" font-size="30" font-weight="700">Nørrebro Posthus</text>
+
+  <rect x="174" y="332" width="118" height="92" rx="24" fill="#f7e7d6" stroke="#c97525" stroke-width="8"/>
+  <path d="M174 378h118" stroke="#c97525" stroke-width="8" stroke-linecap="round"/>
+  <path d="M234 332v92" stroke="#c97525" stroke-width="8" stroke-linecap="round"/>
+  <rect x="254" y="410" width="140" height="104" rx="24" fill="#fbf1e7" stroke="#974f16" stroke-width="8"/>
+  <path d="M254 462h140" stroke="#974f16" stroke-width="8" stroke-linecap="round"/>
+  <path d="M324 410v104" stroke="#974f16" stroke-width="8" stroke-linecap="round"/>
+  <rect x="188" y="536" width="184" height="16" rx="8" fill="#4b2f1d" opacity="0.18"/>
+
+  <path d="M398 422c30 8 57 8 84 0" fill="none" stroke="#4b2f1d" stroke-width="12" stroke-linecap="round"/>
+  <rect x="414" y="350" width="108" height="82" rx="20" fill="#fbf1e7" stroke="#c97525" stroke-width="8"/>
+  <rect x="440" y="318" width="56" height="32" rx="14" fill="#f2b36b"/>
+  <path d="M468 350v82" stroke="#c97525" stroke-width="8" stroke-linecap="round"/>
+  <path d="M426 390h84" stroke="#c97525" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="214" y="578" width="236" height="44" rx="20" fill="#110b07"/>
+  <text x="250" y="607" fill="#fbf1e7" font-family="Rubik, Arial, sans-serif" font-size="24" font-weight="700">Afhentet lokalt</text>
 </svg>

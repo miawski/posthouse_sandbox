@@ -212,6 +212,38 @@ h3,
   color: var(--text);
   cursor: pointer;
   position: relative;
+  isolation: isolate;
+}
+
+.theme-switch::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 0.55rem);
+  transform: translate(-50%, -0.35rem);
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(17, 11, 7, 0.96);
+  border: 1px solid rgba(246, 212, 177, 0.16);
+  color: #fbf1e7;
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  z-index: 4;
+}
+
+:root[data-theme="light"] .theme-switch::after {
+  background: rgba(255, 251, 246, 0.98);
+  border-color: rgba(88, 49, 18, 0.14);
+  color: #24160d;
 }
 
 .theme-switch-track {
@@ -307,6 +339,12 @@ h3,
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.28),
     0 12px 28px rgba(37, 19, 7, 0.24);
+}
+
+.theme-switch:hover::after,
+.theme-switch:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .theme-switch:focus-visible {
@@ -1039,6 +1077,16 @@ h3 {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.gallery-card__image--id-card {
+  display: block;
+  aspect-ratio: 260.666 / 190.612;
+  object-position: center;
+  object-fit: contain;
+  box-sizing: border-box;
+  padding: 0;
+  background: #fbf3e8;
 }
 
 .gallery-card figcaption {

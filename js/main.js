@@ -28,6 +28,7 @@ function updateThemeButton() {
   if (!themeToggle) return;
 
   const isDark = root.dataset.theme === "dark";
+  const tooltipText = isDark ? "light mode" : "dark mode";
 
   if (themeSwitchText) {
     themeSwitchText.textContent = isDark ? "Lys" : "Mørk";
@@ -38,6 +39,7 @@ function updateThemeButton() {
     isDark ? "Skift til lys tilstand" : "Skift til mørk tilstand",
   );
   themeToggle.setAttribute("aria-checked", String(isDark));
+  themeToggle.setAttribute("data-tooltip", tooltipText);
 }
 
 function setMenuState(isOpen) {

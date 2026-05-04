@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260.666 190.612" role="img" aria-labelledby="title desc">
+  <title id="title">Legitimationskort</title>
+  <desc id="desc">Stiliseret id card i samme mørke, orange og creme-farver som resten af website-grafikken.</desc>
+
+  <rect x="6" y="10" width="248.666" height="170.612" rx="18" fill="#110b07"/>
+  <rect x="22" y="26" width="94" height="118" rx="14" fill="#fbf1e7"/>
+  <rect x="34" y="38" width="42" height="12" rx="6" fill="#d9782a"/>
+
+  <circle cx="69" cy="75" r="22" fill="#24160d"/>
+  <path d="M38 144v-18c0-21 14-35 31-35h0c17 0 31 14 31 35v18z" fill="#24160d"/>
+
+  <rect x="145" y="48" width="82" height="11" rx="5.5" fill="#fbf1e7" opacity="0.94"/>
+  <rect x="145" y="79" width="72" height="11" rx="5.5" fill="#f6d4b1" opacity="0.72"/>
+  <rect x="145" y="110" width="90" height="11" rx="5.5" fill="#fbf1e7" opacity="0.94"/>
+
+  <rect x="145" y="133" width="58" height="24" rx="8" fill="#2d1a0f"/>
+</svg>

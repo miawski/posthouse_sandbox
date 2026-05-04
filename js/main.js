@@ -210,13 +210,29 @@ function setupHeroMotion() {
     element.style.top = `${point.y + offsetY}px`;
   }
 
-  function positionHeroLabel(element, point, offsetX = 0, offsetY = 0) {
+  function positionHeroLabel(
+    element,
+    point,
+    offsetX = 0,
+    offsetY = 0,
+    anchor = "center",
+  ) {
     if (!element || !point || !heroMotionSvg) return;
 
     const labelWidth = element.offsetWidth || 112;
     const labelHeight = element.offsetHeight || 34;
+    let desiredX = point.x + offsetX;
+
+    if (anchor === "left-outside") {
+      desiredX = point.x - labelWidth - offsetX;
+    } else if (anchor === "right-outside") {
+      desiredX = point.x + offsetX;
+    } else if (anchor === "center") {
+      desiredX = point.x - (labelWidth / 2) + offsetX;
+    }
+
     const x = clampHeroValue(
-      point.x + offsetX,
+      desiredX,
       12,
       heroMotionSvg.clientWidth - labelWidth - 12,
     );
@@ -235,20 +251,27 @@ function setupHeroMotion() {
     const startPoint = getHeroPoint(compact ? 0.04 : 0.02);
     const midPoint = getHeroPoint(compact ? 0.48 : 0.52);
     const endPoint = getHeroPoint(compact ? 0.76 : 0.86);
-    const markerPoint = getHeroPoint(compact ? 0.88 : 1);
-    const statusPoint = getHeroPoint(compact ? 0.16 : 0.12);
-    const destinationPoint = getHeroPoint(compact ? 0.66 : 0.88);
+    const markerPoint = getHeroPoint(1);
+    const statusPoint = getHeroPoint(compact ? 0.04 : 0.02);
+    const destinationPoint = compact ? getHeroPoint(0.72) : markerPoint;
 
     positionHeroElement(heroNodeStart, startPoint);
     positionHeroElement(heroNodeMid, midPoint);
     positionHeroElement(heroNodeEnd, endPoint);
-    positionHeroElement(heroMarker, markerPoint, compact ? -30 : 0, compact ? 2 : 0);
-    positionHeroLabel(heroStatusLabel, statusPoint, compact ? -8 : -14, compact ? 20 : 26);
+    positionHeroElement(heroMarker, markerPoint, 0, compact ? 1 : 0);
+    positionHeroLabel(
+      heroStatusLabel,
+      statusPoint,
+      compact ? 10 : 12,
+      compact ? 16 : 18,
+      "left-outside",
+    );
     positionHeroLabel(
       heroDestinationLabel,
       destinationPoint,
-      compact ? -72 : 16,
-      compact ? -66 : -30,
+      compact ? 6 : 36,
+      compact ? -38 : -88,
+      "right-outside",
     );
   }
 

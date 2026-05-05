@@ -1,5 +1,5 @@
 :root {
-  --font-sans: "Rubik", Arial, Helvetica, sans-serif;
+  --font-sans: "Alumni Sans", "Helvetica Neue", Arial, sans-serif;
   --bg: #110b07;
   --bg-soft: #24170e;
   --surface: rgba(255, 247, 239, 0.06);
@@ -15,7 +15,7 @@
   --accent-contrast: #1b1009;
   --line: rgba(242, 179, 107, 0.18);
   --shadow: 0 22px 54px rgba(10, 5, 2, 0.36);
-  --radius: 1.35rem;
+  --radius: 5px;
 }
 
 :root[data-theme="light"] {
@@ -168,7 +168,7 @@ h3,
 
 .nav-menu a {
   padding: 0.6rem 0.95rem;
-  border-radius: 999px;
+  border-radius: 5px;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -488,7 +488,7 @@ h3 {
 
 .hero__details li {
   padding: 0.55rem 0.85rem;
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(224, 151, 63, 0.22);
   color: var(--text);
@@ -510,7 +510,7 @@ h3 {
   justify-content: center;
   min-width: 11rem;
   padding: 0.85rem 1.3rem;
-  border-radius: 999px;
+  border-radius: 5px;
   border: 1px solid transparent;
   background: linear-gradient(180deg, var(--accent-warm) 0%, var(--accent-warm-strong) 100%);
   color: var(--accent-contrast);
@@ -875,6 +875,7 @@ h3 {
 }
 
 .about-card--media {
+  position: relative;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -888,6 +889,48 @@ h3 {
   object-fit: cover;
 }
 
+.about-card__overlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(calc(100% - 2rem), 22rem);
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.1rem;
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius);
+  border: 1px solid rgba(224, 151, 63, 0.32);
+  background: linear-gradient(180deg, rgba(18, 10, 5, 0.84), rgba(43, 25, 12, 0.9));
+  color: #fbf1e7;
+  text-align: center;
+  justify-items: center;
+}
+
+:root[data-theme="light"] .about-card__overlay {
+  background: rgba(44, 26, 14, 0.84);
+}
+
+.about-card__overlay h3,
+.about-card__overlay p {
+  margin: 0;
+}
+
+.about-card__eyebrow {
+  color: #f6d4b1;
+  font-size: 0.76rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.about-card__overlay h3 {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  line-height: 1;
+}
+
+.about-card__overlay p:last-child {
+  color: rgba(251, 241, 231, 0.86);
+}
+
 .about-card--copy {
   display: grid;
   gap: 1rem;
@@ -898,7 +941,7 @@ h3 {
   display: grid;
   gap: 0.25rem;
   padding: 1rem 1.1rem;
-  border-radius: 1.1rem;
+  border-radius: var(--radius);
   border: 1px solid rgba(224, 151, 63, 0.32);
   background: linear-gradient(180deg, rgba(242, 179, 107, 0.2), rgba(87, 49, 17, 0.08));
 }
@@ -934,7 +977,7 @@ h3 {
   margin: 0;
   justify-self: start;
   padding: 0.42rem 0.72rem;
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--accent-soft);
   color: var(--accent);
   letter-spacing: 0.08em;
@@ -994,7 +1037,7 @@ h3 {
   position: absolute;
   inset: auto 1rem 1rem 1rem;
   padding: 1rem 1.1rem;
-  border-radius: 1rem;
+  border-radius: var(--radius);
   border: 1px solid rgba(224, 151, 63, 0.32);
   background: linear-gradient(180deg, rgba(18, 10, 5, 0.84), rgba(43, 25, 12, 0.9));
   color: #fbf1e7;
@@ -1031,7 +1074,7 @@ h3 {
   padding: 0.95rem 1rem;
   border-left: 3px solid var(--accent-warm);
   background: linear-gradient(90deg, var(--accent-warm-soft), rgba(255, 255, 255, 0.04));
-  border-radius: 0.9rem;
+  border-radius: var(--radius);
 }
 
 :root[data-theme="light"] .info-note {
@@ -1113,7 +1156,7 @@ h3 {
 
 .tag-list span {
   padding: 0.5rem 0.8rem;
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--accent-soft);
   border: 1px solid rgba(224, 151, 63, 0.24);
   color: var(--text);
@@ -1178,47 +1221,57 @@ h3 {
   right: 1rem;
   bottom: 1rem;
   z-index: 15;
-  min-width: 6.4rem;
-  padding: 0.8rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(224, 151, 63, 0.42);
-  background: rgba(15, 9, 5, 0.9);
-  color: #fbf1e7;
+  min-width: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent-warm);
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
-  display: inline-grid;
-  gap: 0.35rem;
-  justify-items: center;
+  backdrop-filter: none;
+  box-shadow: none;
+  display: inline-flex;
+  gap: 0.45rem;
+  justify-content: center;
   align-items: center;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(14, 9, 5, 0.4);
   transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
+    color 180ms ease,
+    text-shadow 180ms ease,
     bottom 180ms ease;
 }
 
 :root[data-theme="light"] .scroll-fab {
-  background: rgba(255, 255, 255, 0.92);
-  color: #24160d;
+  color: var(--accent-warm-strong);
+  text-shadow: 0 2px 8px rgba(251, 243, 232, 0.55);
 }
 
 .scroll-fab:hover,
 .scroll-fab:focus-visible {
-  background: var(--accent-warm);
-  color: var(--accent-contrast);
+  color: var(--accent-warm-strong);
+  text-shadow: 0 2px 12px rgba(14, 9, 5, 0.28);
+}
+
+:root[data-theme="light"] .scroll-fab:hover,
+:root[data-theme="light"] .scroll-fab:focus-visible {
+  color: var(--accent-warm);
+  text-shadow: 0 2px 10px rgba(251, 243, 232, 0.4);
 }
 
 .scroll-fab::after {
   content: "";
-  width: 0.78rem;
-  height: 0.78rem;
+  width: 0.72rem;
+  height: 0.72rem;
   border-right: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
+  transform: translateY(-0.08rem) rotate(45deg);
 }
 
 .scroll-fab.is-top::after {
-  transform: rotate(225deg);
+  transform: translateY(0.08rem) rotate(225deg);
 }
 
 .site-footer {
@@ -1338,6 +1391,32 @@ h3 {
 }
 
 @media (max-width: 859px) {
+  .theme-switch {
+    width: 4.25rem;
+    height: 2.45rem;
+  }
+
+  .theme-switch-track {
+    width: 4rem;
+    height: 2.1rem;
+    padding: 0 0.38rem;
+  }
+
+  .theme-switch-icon {
+    font-size: 0.84rem;
+  }
+
+  .theme-switch-thumb {
+    top: 0.22rem;
+    left: 0.24rem;
+    width: 1.65rem;
+    height: 1.65rem;
+  }
+
+  .theme-switch[aria-checked="true"] .theme-switch-thumb {
+    transform: translateX(1.78rem);
+  }
+
   .burger {
     display: inline-block;
   }
@@ -1351,7 +1430,7 @@ h3 {
     flex-direction: column;
     align-items: stretch;
     padding: 0.9rem;
-    border-radius: 1.2rem;
+    border-radius: var(--radius);
     background: rgba(16, 9, 4, 0.96);
     box-shadow: var(--shadow);
     margin-left: 0;
